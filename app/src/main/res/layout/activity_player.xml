@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:background="@drawable/back1"
+    android:orientation="vertical"
+    tools:context=".PlayerActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtsn"
+            android:layout_margin="20dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="Song Name"
+            android:textColor="#FFF"
+            android:textSize="22sp"
+            android:textStyle="italic"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_margin="25dp"
+                android:src="@drawable/music">
+
+            </ImageView>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                app:lottie_autoPlay="true"
+                app:lottie_colorFilter="@color/purple_500"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/sound"
+                />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            >
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20dp"
+                android:layout_marginBottom="40dp">
+
+            </SeekBar>
+            <TextView
+                android:id="@+id/txtSStrat"
+                android:layout_toLeftOf="@+id/seekBar"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="false"
+                android:layout_marginLeft="20dp"
+                android:text="0:10"
+                android:textColor="#FFF"
+                android:textSize="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:id="@+id/txtSStop"
+                android:layout_toRightOf="@+id/seekBar"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="false"
+                android:layout_marginRight="20dp"
+                android:text="0:10"
+                android:textColor="#FFF"
+                android:textSize="14dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+        </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/playbtn"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_baseline_pause"
+                android:layout_width="70dp"
+                android:layout_height="70dp">
+            </Button>
+            <Button
+                android:id="@+id/btnnext"
+                android:layout_toRightOf="@+id/playbtn"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_baseline_skip"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+            </Button>
+            <Button
+                android:id="@+id/btnprevious"
+                android:layout_toLeftOf="@+id/playbtn"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_baseline_skip_previous"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+            </Button>
+            <Button
+                android:id="@+id/btnFF"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toRightOf="@id/btnnext"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_baseline_fast_forward">
+
+            </Button>
+            <Button
+                android:id="@+id/btnFR"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_toLeftOf="@id/btnprevious"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/ic_baseline_fast_rewind">
+
+            </Button>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
